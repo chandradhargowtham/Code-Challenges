@@ -1,0 +1,13 @@
+String[] addBorder(String[] picture) {
+    String[] border = new String[picture.length + 2];
+    int len = picture[0].length();
+    String full = "";
+    for(int i = 0; i < len + 2; ++i) full += "*";
+    border[0] = full;
+    border[border.length - 1] = full;
+    for(int i = 0; i < picture.length; ++i) {
+        picture[i] = "*" + picture[i] + "*";
+        border[i+1] = picture[i];
+    }
+    return border;
+}
