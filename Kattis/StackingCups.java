@@ -6,7 +6,7 @@ class StackingCups
 	public static void main(String[] args) throws Exception
 	{
 		HashMap<Integer,String> hm= new HashMap<>();
-		ArrayList<String> al= new ArrayList<>();
+		ArrayList<Integer> al= new ArrayList<>();
 
 		String p1="";
 		String p2="";
@@ -22,18 +22,19 @@ class StackingCups
 				int r=Integer.parseInt(p1);
 				String x=p2;
 				hm.put(r/2,x);
-				al.add(x);
+				al.add(r/2);
 			}
 			catch(Exception e)
 			{
 				int r= Integer.parseInt(p2);
 				String x = p1;
 				hm.put(r,x);
-				al.add(x);
+				al.add(r);
 			}
 			cases--;
 		}
 		Map<Integer,String> sortedMap = new TreeMap<Integer,String>(hm);
+		Collections.sort(al);
 		    for (int i = 0; i < al.size(); i++)
 				System.out.println(sortedMap.get(al.get(i)));
 
