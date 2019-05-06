@@ -1,0 +1,11 @@
+int a=scan.nextInt();
+        double b=scan.nextDouble();
+        scan.nextLine();
+        String c=scan.nextLine();
+
+        System.out.println(i+a);
+        System.out.println(d+b);
+        System.out.println(s+c);
+
+        //A new empty nextLine() is added as a buffer.
+        //nextLine() reads till \n but after the double input there is a new line //followed by the string. so u can skip it using one extra nextLine()
