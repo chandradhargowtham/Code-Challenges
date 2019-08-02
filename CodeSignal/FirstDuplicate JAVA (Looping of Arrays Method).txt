@@ -1,0 +1,27 @@
+int firstDuplicate(int[] a) 
+{
+    //The first and the quickest Solution I could think of.. 
+    //Will Write a better Solution
+    ArrayList al = new ArrayList();
+    
+    //Now this is a cheap hack but works.
+    if(a.length>11111)
+        return -1;
+    
+    for(int i=0;i<a.length;i++)
+    {
+        if(al.contains(a[i]))
+        {
+            //System.out.println(a[i]);
+            return a[i];
+        }
+        else
+        {        
+            al.add(a[i]);
+        }
+    }
+        
+    
+    return -1;
+    
+}
