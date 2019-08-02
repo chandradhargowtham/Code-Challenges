@@ -1,0 +1,15 @@
+char firstNotRepeatingCharacter(string s) {
+    int[] c = new int[255];
+    char[] sc = s.ToCharArray();
+    foreach (char d in sc) {
+        c[d]++;
+    }
+    foreach (char d in sc) 
+    {
+        if(c[d] == 1)
+        {
+            return d;
+        }
+    }
+    return '_';
+}

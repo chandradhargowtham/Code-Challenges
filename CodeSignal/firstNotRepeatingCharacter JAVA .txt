@@ -1,0 +1,15 @@
+char firstNotRepeatingCharacter(String s) {
+    int[] c = new int[255];
+    char[] sc = s.toCharArray();
+    for (char d : sc) {
+        c[d]++;
+    }
+    for (char d : sc) 
+    {
+        if(c[d] == 1)
+        {
+            return d;
+        }
+    }
+    return '_';
+}
